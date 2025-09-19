@@ -3,6 +3,12 @@ import pandas as pd
 import numpy as np
 import joblib
 
+# load dataset
+cols = ["Pregnancies","Glucose","BloodPressure","SkinThickness",
+        "Insulin","BMI","DiabetesPedigreeFunction","Age","Outcome"]
+
+df = pd.read_csv("diabetes_dataset.txt", names=cols, sep=',')
+
 # Load trained model
 model = joblib.load("diabetes_model.pkl")
 
